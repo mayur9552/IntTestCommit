@@ -14,6 +14,7 @@ public class Main{
 
       System.out.println("Enter any number, I will give you a Factorial");
 
+
       int n = sc.nextInt();
 
       System.out.println("There are 2 Ways.\n1. with loop\n2. with recursive\nChoose any one");
