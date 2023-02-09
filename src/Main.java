@@ -8,6 +8,7 @@ public class Main{
             return (n*fact(n-1));
         }
     }
+
      public static void factorial(){
          Scanner sc = new Scanner(System.in);
 
@@ -86,22 +87,18 @@ public class Main{
         Scanner sc = new Scanner(System.in);
 
         System.out.printf("Enter any number: ");
-        int n = sc.nextInt();
-        int c = 10;
+        int num = sc.nextInt();
+        int n = num;
         int res=0;
 
-        for(i=0; i< ; i++){
-            int temp = n%c;
-            temp = temp*(c/10);
-            res = res+temp;
-            c=c*10;
-            n=n-temp;
+        while(n!=0){
+           res = res*10 + n%10;
+           n = n/10;
         }
 
 
-        System.out.println("Not Hard, Reverse of " + n + " is " + c);
+        System.out.println("Not Hard, Reverse of " + num + " is " + res);
     }
-
 
      public static void sumoe(){
         Scanner sc = new Scanner(System.in);
@@ -194,65 +191,61 @@ public class Main{
 
      public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Welcome to Java Assignment\n");
-        System.out.println("1. factorial");
-        System.out.println("2. Sum of first N number");
-        System.out.println("3. Digits in Reversed");
-        System.out.println("4. Sum of even and odd numbers");
-        System.out.println("5. Until negative, sum of all");
-        System.out.println("6. Reverse of 1 to 7");
-        System.out.println("7. Diagnol Star Pattern");
-        System.out.println("8. Decreasing Star Pattern");
-        System.out.println("9. Increasing Star Pattern");
-        System.out.printf("Choose from above: ");
-        int op = sc.nextInt();
+
+             System.out.println("Welcome to Java Assignment\n");
+             System.out.println("1. factorial");
+             System.out.println("2. Sum of first N number");
+             System.out.println("3. Digits in Reversed");
+             System.out.println("4. Sum of even and odd numbers");
+             System.out.println("5. Until negative, sum of all");
+             System.out.println("6. Reverse of 1 to 7");
+             System.out.println("7. Diagnol Star Pattern");
+             System.out.println("8. Decreasing Star Pattern");
+             System.out.println("9. Increasing Star Pattern");
+             System.out.printf("Choose from above: ");
+             int op = sc.nextInt();
+
+             switch (op) {
+                 case 1:
+                     factorial();
+                     break;
+
+                 case 2:
+                     sum();
+                     break;
+
+                 case 3:
+                     rev();
+                     break;
+
+                 case 4:
+                     sumoe();
+                     break;
+
+                 case 5:
+                     untiln();
+                     break;
+
+                 case 6:
+                     rev1to7();
+                     break;
+
+                 case 7:
+                     diagStar();
+                     break;
+
+                 case 8:
+                     decStar();
+                     break;
+
+                 case 9:
+                     incStar();
+                     break;
 
 
-        switch(op){
-            case 1:
-                factorial();
-                break;
-
-            case 2:
-                sum();
-                break;
-
-            case 3:
-                rev();
-                break;
-
-            case 4:
-                sumoe();
-                break;
-
-            case 5:
-                untiln();
-                break;
-
-            case 6:
-                rev1to7();
-                break;
-
-            case 7:
-                diagStar();
-                break;
-
-            case 8:
-                decStar();
-                break;
-
-            case 9:
-                incStar();
-                break;
-
-
-            default:
-                System.out.printf("Invalid option. Try again!");
-        }
-
-
-
-
+                 default:
+                     System.out.printf("Invalid option. Try again!");
+             }
 
     }
 }
