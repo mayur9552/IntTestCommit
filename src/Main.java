@@ -151,6 +151,20 @@ public class Main{
         }
     }
 
+    public static void findLargestString(){
+        System.out.println("Enter Paragraph: ");
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+
+      String[] splitedString = s.split(" ");
+       String max = "";
+
+       for(int i=0 ; i<splitedString.length ; i++){
+           if(max.length()<splitedString[i].length()) max=splitedString[i];
+       }
+        System.out.println("Largest String is: " + max);
+    };
+
 
      public static void main(String[] args) {
          Scanner sc = new Scanner(System.in);
@@ -168,6 +182,7 @@ public class Main{
              System.out.println("7. Diagnol Star Pattern");
              System.out.println("8. Decreasing Star Pattern");
              System.out.println("9. Increasing Star Pattern");
+             System.out.println("10. Find the largest String from the paragraph");
              System.out.println("0. Exit");
              System.out.printf("Choose from above: ");
              op = sc.nextInt();
@@ -224,6 +239,10 @@ public class Main{
 
                  case 9:
                      incStar();
+                     break;
+
+                 case 10:
+                     findLargestString();
                      break;
 
                  default:
